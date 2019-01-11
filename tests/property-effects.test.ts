@@ -10,7 +10,7 @@ describe('Property Effects', () => {
           expect(event.type).to.eq('prop-changed');
           done();
         }
-      } as any, 'null', null, { notify: 'prop-changed' });
+      } as any, 'null', null, { notify: 'prop-changed' } as any);
     });
   });
   describe('reflect', () => {
@@ -23,7 +23,7 @@ describe('Property Effects', () => {
           expect(value).to.eq(serializedValue);
           done();
         }
-      } as any, 'null', propertyValue, { converter: JSON, attribute: 'attr-name' });
+      } as any, 'null', propertyValue, { converter: JSON, attribute: 'attr-name' } as any);
     });
   });
 });

@@ -6,6 +6,11 @@
   "author": "Dracco",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "typedoc": "typedoc --out docs --name 'ReactiveX Web Component' --readme readme.md --excludeExternals --hideGenerator",
+    "test": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\"}' mocha --require ts-node/register --ui bdd tests/*.test.ts",
+    "coverage": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\"}' nyc --extension=.ts --extension=.js mocha --ui bdd tests/*.test.ts"
+  },
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",
@@ -14,9 +19,15 @@
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
     "ts-node": "^7.0.1",
+    "typedoc": "^0.14.0",
     "typescript": "^3.2.2"
   },
   "dependencies": {
     "rxjs": "^6.3.3"
+  },
+  "nyc": {
+    "require": [
+      "ts-node/register/type-check"
+    ]
   }
 }
