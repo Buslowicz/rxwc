@@ -1,6 +1,6 @@
 {
   "name": "rxwc",
-  "version": "0.3.0",
+  "version": "0.3.10",
   "description": "Web Components spiced up by ReactiveX",
   "main": "dist/rx-component.js",
   "module": "dist/rx-component.js",
